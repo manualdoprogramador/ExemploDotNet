@@ -1,4 +1,7 @@
-﻿using System.Dynamic;
+﻿// Salve galera blz, bem vindos ao canal manual do programador, no video de hoje vamos fazer um
+// exemplo em .net core, onde vamos criar e manipular um objeto do tipo dynamic. Vamos nessa
+
+using System.Dynamic;
 using Newtonsoft.Json;
 
 dynamic expandDynamic = new ExpandoObject();
