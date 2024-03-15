@@ -8,12 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IDbConnectionFactory,DbConnectionFactory>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("032E2A36-57CD-46A7-A750-3BA98A59F9BA%"));
+var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("032E2A36-57CD-46A7-A750-3BA98A59F9BA"));
 builder.Services.AddAuthentication(authOptions =>
 {
     authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

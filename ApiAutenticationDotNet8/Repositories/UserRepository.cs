@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiAutenticationDotNet8.Entities;
+using Dapper;
 
 namespace ApiAutenticationDotNet8.Repositories
 {
     public class UserRepository : IUserRepository
     {
+        private readonly IDbConnectionFactory _db;
+
+        public UserRepository(IDbConnectionFactory db)
+        {
+            _db = db;
+        }
+
         public User? GetByEmailAndPassword(string email, string password)
         {
+            using var connection = _db.GetDbConnection();
+            var result = connection.QueryFirstOrDefault<User?>("select * from usuario");
             var users = GetUsers();
             return users.FirstOrDefault(x => x.Email == email && x.Password == password);
         }
