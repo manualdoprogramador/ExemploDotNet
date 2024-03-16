@@ -19,18 +19,8 @@ namespace ApiAutenticationDotNet8.Repositories
         public User? GetByEmailAndPassword(string email, string password)
         {
             using var connection = _db.GetDbConnection();
-            var result = connection.QueryFirstOrDefault<User?>("select * from usuario");
-            var users = GetUsers();
-            return users.FirstOrDefault(x => x.Email == email && x.Password == password);
-        }
-
-        private List<User> GetUsers()
-        {
-            var users = new List<User>();
-            users.Add(new User("Maria", "maria@maria.com", "maria123",1));
-            users.Add(new User("Paulo", "paulo@paulo.com", "paulo123",1));
-            users.Add(new User("Carlos", "carlos@carlos.com", "carlos123",1));
-            return users;
+            var result = connection.QueryFirstOrDefault<User?>("SELECT nome as name, email, idusuario as id from usuario where email = @email and senha = @password", new {email, password});
+            return result;
         }
     }
 }

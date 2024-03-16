@@ -7,6 +7,7 @@ namespace ApiAutenticationDotNet8.Entities
 {
     public class User
     {
+        private User(){}
         public User(string name, string email, string password, int id = 0)
         {
             if(id > 0)

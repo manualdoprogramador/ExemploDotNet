@@ -6,9 +6,11 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IDbConnectionFactory,DbConnectionFactory>();
+builder.Services.AddScoped<IInfoTokenUser,InfoTokenUser>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
