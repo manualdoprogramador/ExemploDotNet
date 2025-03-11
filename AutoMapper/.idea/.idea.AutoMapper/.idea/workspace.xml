@@ -8,13 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483aa6c2-1b28-46ba-8bec-02dd023d7230" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/APIAutoMapper/APIAutoMapper.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIAutoMapper/Controller/PersonController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIAutoMapper/Dto/Mapper/PersonMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIAutoMapper/Dto/PersonDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIAutoMapper/Entities/Person.cs" afterDir="false" />
-    </list>
+    <list default="true" id="483aa6c2-1b28-46ba-8bec-02dd023d7230" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731778673186</updated>
-      <workItem from="1731778677867" duration="2017000" />
+      <workItem from="1731778677867" duration="2716000" />
     </task>
     <servers />
   </component>
