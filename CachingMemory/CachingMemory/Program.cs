@@ -17,8 +17,9 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    //app.MapScalarApiReference();
-    app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "Caching Memory API"); });
+    app.MapScalarApiReference();
+    //http://localhost:5264/scalar/v1
+    //app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "Caching Memory API"); });
 }
 
 app.UseHttpsRedirection();
